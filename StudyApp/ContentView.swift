@@ -8,19 +8,101 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var tabenvironment: TabEnvironment
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            NavigationView{
+                ZStack{
+                    if tabenvironment.tabnumber == 0{
+                        Scroll()
+                    } else if tabenvironment.tabnumber == 1 {
+                        
+                    } else if tabenvironment.tabnumber == 2 {
+                        workbookList()
+                    } else if tabenvironment.tabnumber == 4 {
+                        TimerView()
+                    } else if tabenvironment.tabnumber == 5{
+                        CountDownSetting()
+                    } else if tabenvironment.tabnumber == 6{
+                        TodoList()
+                    }
+                   
+                    VStack(){
+                        Spacer()
+                        if tabenvironment.tabPresent == true {
+                            TabButton1()
+                        }
+                    }
+                }
+                .navigationTitle(tabenvironment.tabname)
+                
+            }
+    }
+}
+    
+   struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+                .environmentObject(TabEnvironment())
         }
-        .padding()
     }
-}
+    enum Tab: Int, Identifiable, CaseIterable, Comparable {
+        static func < (lhs: Tab, rhs: Tab) -> Bool {
+            lhs.rawValue < rhs.rawValue
+        }
+        
+        case home, calendar, book, chart
+        
+        internal var id: Int { rawValue }
+        
+        var icon: String {
+            switch self {
+            case .home:
+                return "house.fill"
+            case .calendar:
+                return "calendar"
+            case .book:
+                return "books.vertical.fill"
+            case .chart:
+                return "chart.xyaxis.line"
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case .home:
+                return "Home"
+            case .calendar:
+                return "Calendar"
+            case .book:
+                return "Books"
+            case .chart:
+                return "Chart"
+            }
+        }
+        
+        var color: Color {
+            switch self {
+            case .home:
+                return .indigo
+            case .calendar:
+                return .pink
+            case .book:
+                return .orange
+            case .chart:
+                return .teal
+            }
+        }
+        var view: Int{
+            switch self {
+            case .home:
+                return 0
+            case .calendar:
+                return 1
+            case .book:
+                return 2
+            case .chart:
+                return 3
+            }
+        }
+    }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
