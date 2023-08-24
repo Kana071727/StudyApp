@@ -19,30 +19,35 @@ struct CountDownSetting: View {
         let dayspan = span/60/60/24
         VStack{
             Spacer()
-                Button("To Home"){
-                    tabenvironment.tabnumber = 0
-                    tabenvironment.tabPresent = true
-                    tabenvironment.tabname = "Home"
-                }
+            Button("To Home"){
+                tabenvironment.tabnumber = 0
+                tabenvironment.tabPresent = true
+                tabenvironment.tabname = "Home"
+            }
             .padding()
             ZStack{
                 RoundedRectangle(cornerRadius: 30)
-                    .frame(width: UIScreen.main.bounds.size.width * 0.6,
-                           height: UIScreen.main.bounds.size.width * 0.6
-                    )
+                  
                     .foregroundStyle(countdownColor.gradient)
-                VStack(alignment: .leading){
+                VStack(alignment: .center){
                     HStack{
                         Text(countdownname)
-                        Text("まであと")
+                        Text("まで")
                     }
+                    Spacer()
                     HStack(alignment: .bottom){
+                        Spacer()
                         Text(String(Int(dayspan)))
-                            .font(.system(size:30))
+                            .font(.system(size:100))
+                        Spacer()
                         Text("日")
                     }
                 }
+                .padding()
             }
+            .frame(width: UIScreen.main.bounds.size.width * 0.6,
+                   height: UIScreen.main.bounds.size.width * 0.6
+            )
             List{
                 TextField("名前",text: $countdownname)
                 DatePicker(selection: $countdown, displayedComponents: .date, label: {Text("日付")})

@@ -28,12 +28,11 @@ struct questionView: View {
             }
             ///出典表示
             HStack{
-                Image(systemName: "lightbulb.max")
+                Image(systemName: "lightbulb")
                 Button("HINT") {
                     hintIsShow = !hintIsShow
                 }
                 Spacer()
-                Image(systemName: "tag")
                 Text("(○○ページ　大問○)")
             }
             ///答え見るボタン＆ヒントボタン
@@ -43,26 +42,32 @@ struct questionView: View {
             }
                 .opacity(hintIsShow ? 1 : 0)
                 .padding()
-            Button("解答") {
+            Button {
                 answerIsShow = true
+            }label:{
+                Text("解答")
+                    .foregroundColor(Color.black)
             }
             .frame(width: UIScreen.main.bounds.size.width * 0.4,
                    height: UIScreen.main.bounds.size.width * 0.1)
             .background(RoundedRectangle(cornerRadius: 30)
-                .fill(Color.yellow))
+                .fill(Color.yellow.gradient))
             
             ///答えパート
             VStack {
                 Rectangle()
                     .frame(width: UIScreen.main.bounds.size.width * 0.95,
                            height: UIScreen.main.bounds.size.width * 0.5)
-                Button("次へ") {
+                Button {
                     /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }label:{
+                    Text("次へ")
+                        .foregroundColor(Color.black)
                 }
                 .frame(width: UIScreen.main.bounds.size.width * 0.4,
                        height: UIScreen.main.bounds.size.width * 0.1)
                 .background(RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.yellow))
+                    .fill(Color.yellow.gradient))
                 .padding()
 
             }

@@ -9,37 +9,30 @@ import SwiftUI
 
 struct TimerView: View {
     @EnvironmentObject var tabenvironment: TabEnvironment
+    @StateObject var timerManager = TimerManager()
     
     var body: some View {
-        VStack{
-            Text("05:20")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                
-            ZStack{
-                Circle()
-                    .fill(Color.green)
-                    .frame(width:UIScreen.main.bounds.size.width * 0.6,
-                           height: UIScreen.main.bounds.size.width * 0.6)
-                Circle()
-                    .fill(Color.black)
-                    .frame(width:UIScreen.main.bounds.size.width * 0.1,
-                           height: UIScreen.main.bounds.size.width * 0.1)
+        VStack {
+            //MARK: Background
+            
+            //MARK: Progress Ring
+            
+            CircleProgressBar()
+            HStack(spacing: 60) {
+                Button{
+                    timerManager.toggleTimerState()
+                } label: {
+                    Text(timerManager.timerState == .notStarted ? "Start" : "Stop")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 8)
+                        .background(.thinMaterial)
+                        .cornerRadius(20)
+                }
             }
-           
-            Slider(value: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant(10)/*@END_MENU_TOKEN@*/)
-                .padding([.top, .leading, .trailing], 20.0)
-            Button("To Home") {
-                tabenvironment.tabnumber = 0
-                tabenvironment.tabname = "Home"
-                tabenvironment.tabPresent = true
-            }
-            Spacer()
+            .padding()
         }
-        .padding()
-       
-        
-        
     }
 }
 
