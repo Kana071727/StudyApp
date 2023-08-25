@@ -17,10 +17,10 @@ struct Task: Identifiable {
 
 var sampleTasks: [Task] = [
     .init(taskTitle: "Record Video", creationDate: .updateHour(-5),isCompleted: true, tint: .cyan),
-    .init(taskTitle: "Redesign Website",creationDate: .updateHour(-3),isCompleted: true, tint: .pink),
-    .init(taskTitle: "Go for a Walk",creationDate: .updateHour(-4),isCompleted: true, tint: .green),
+    .init(taskTitle: "Redesign Website",creationDate: .updateHour(-3),isCompleted: false, tint: .pink),
+    .init(taskTitle: "Go for a Walk",creationDate: .updateHour(-4),isCompleted: false, tint: .green),
     .init(taskTitle: "Edit Video",creationDate: .updateHour(0),isCompleted: true, tint: .orange),
-    .init(taskTitle: "Publish Video",creationDate: .updateHour(2),isCompleted: true, tint: .cyan),
+    .init(taskTitle: "Publish Video",creationDate: .updateHour(2),isCompleted: false, tint: .cyan),
     .init(taskTitle: "Tweet about new Video",creationDate: .updateHour(1),isCompleted: true, tint: .yellow),
 ]
 

@@ -15,10 +15,25 @@ extension Date {
         
         return formatter.string(from: self)
     }
+    
+    
     //MARK: Checking Whether the Date is Today
     var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
+    
+    
+    //MARK: Checking if the date is Same Hour
+    var isSameHour: Bool {
+        return Calendar.current.compare(self, to: .init(), toGranularity: .hour) == .orderedSame
+    }
+    
+    //MARK: Checking if the date is Past Hour
+    var isPast: Bool {
+        return Calendar.current.compare(self, to: .init(), toGranularity: .hour) == .orderedAscending
+    }
+    
+    
     ///Fetching = 取得
     //MARK: Fetching Week Based on given Date
     func fetchWeek(_ date:Date = .init()) -> [WeekDay] {
