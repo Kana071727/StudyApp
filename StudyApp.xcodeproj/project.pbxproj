@@ -21,8 +21,7 @@
 		544AEE082A556FC200E4207D /* questionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AEE072A556FC200E4207D /* questionView.swift */; };
 		544AEE0A2A5582BE00E4207D /* workbookresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AEE092A5582BE00E4207D /* workbookresult.swift */; };
 		544AEE0C2A55855100E4207D /* WorkbookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AEE0B2A55855100E4207D /* WorkbookHome.swift */; };
-		545C2D112A275D4600AC1B50 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C2D102A275D4600AC1B50 /* CircleProgressBar.swift */; };
-		547918EA2A95A944009B9963 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547918E92A95A944009B9963 /* TimerManager.swift */; };
+		547918EA2A95A944009B9963 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547918E92A95A944009B9963 /* TimerModel.swift */; };
 		54A783A02A95D62C00E9AB1A /* Scheduleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */; };
 		54A9B1042A430B20008227C7 /* ClockSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B1032A430B20008227C7 /* ClockSmall.swift */; };
 		54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B10B2A43132B008227C7 /* CountdownS.swift */; };
@@ -87,8 +86,7 @@
 		544AEE072A556FC200E4207D /* questionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionView.swift; sourceTree = "<group>"; };
 		544AEE092A5582BE00E4207D /* workbookresult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workbookresult.swift; sourceTree = "<group>"; };
 		544AEE0B2A55855100E4207D /* WorkbookHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookHome.swift; sourceTree = "<group>"; };
-		545C2D102A275D4600AC1B50 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
-		547918E92A95A944009B9963 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		547918E92A95A944009B9963 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduleview.swift; sourceTree = "<group>"; };
 		54A9B1032A430B20008227C7 /* ClockSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSmall.swift; sourceTree = "<group>"; };
 		54A9B10B2A43132B008227C7 /* CountdownS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownS.swift; sourceTree = "<group>"; };
@@ -153,8 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				544AEDFE2A5543FB00E4207D /* TimerView.swift */,
-				547918E92A95A944009B9963 /* TimerManager.swift */,
-				545C2D102A275D4600AC1B50 /* CircleProgressBar.swift */,
+				547918E92A95A944009B9963 /* TimerModel.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -490,7 +487,7 @@
 				54EE0A732A7A292600A9DA5E /* TodoList.swift in Sources */,
 				54F624B72A2744EC006C5474 /* clockWidget.swift in Sources */,
 				540A1BA52A5EB39A0057E0B2 /* chartwidget.swift in Sources */,
-				547918EA2A95A944009B9963 /* TimerManager.swift in Sources */,
+				547918EA2A95A944009B9963 /* TimerModel.swift in Sources */,
 				540A1BAB2A5EC2180057E0B2 /* WordWindow.swift in Sources */,
 				54EE0A7B2A7A747200A9DA5E /* workbookItem.swift in Sources */,
 				54D97A9F2A96124700608E9F /* ScheduleModel.swift in Sources */,
@@ -511,7 +508,6 @@
 				54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */,
 				544AEE0C2A55855100E4207D /* WorkbookHome.swift in Sources */,
 				540A1BA72A5EB9920057E0B2 /* TabEnvironment.swift in Sources */,
-				545C2D112A275D4600AC1B50 /* CircleProgressBar.swift in Sources */,
 				54D97AA32A96167200608E9F /* ScheduleHome.swift in Sources */,
 				54C1D7222A9F33E2000AB6AE /* questionList.swift in Sources */,
 				544AEDFF2A5543FC00E4207D /* TimerView.swift in Sources */,

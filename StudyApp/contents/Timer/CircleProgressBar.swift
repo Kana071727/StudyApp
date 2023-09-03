@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircleProgressBar: View {
-    @EnvironmentObject var timerManager: TimerManager
+
     @State var progress = 0.5
     let timer = Timer
         .publish(every: 1, on: .main, in: .common)
