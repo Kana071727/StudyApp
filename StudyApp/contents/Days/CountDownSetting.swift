@@ -11,7 +11,7 @@ struct CountDownSetting: View {
     @EnvironmentObject var tabenvironment: TabEnvironment
     @State var countdown = Date()
     @State var countdownname = ""
-    @State var countdownColor = Color.red
+    @State var countdownColor = Color.gray
     @State var today = Date()
     
     var body: some View {
@@ -27,7 +27,6 @@ struct CountDownSetting: View {
             .padding()
             ZStack{
                 RoundedRectangle(cornerRadius: 30)
-                  
                     .foregroundStyle(countdownColor.gradient)
                 VStack(alignment: .center){
                     HStack{

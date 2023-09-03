@@ -24,7 +24,7 @@ struct dayapp: View {
                    height: UIScreen.main.bounds.size.width * 0.15
                )
                .background(RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.yellow.gradient)
+                .foregroundStyle(Color(#colorLiteral(red: 1, green: 0.6948026419, blue: 0.2879050672, alpha: 1)).gradient)
                    )
     }
 }

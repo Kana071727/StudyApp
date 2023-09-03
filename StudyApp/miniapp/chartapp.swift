@@ -26,8 +26,9 @@ struct chartapp: View {
     }
 
 
+@available(iOS 17.0, *)
 struct chartapp_Previews: PreviewProvider{
     static var previews: some View {
-        chartapp()
+        ContentView()
     }
 }

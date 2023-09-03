@@ -10,18 +10,49 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct ScheduleHome: View {
     //MARK: Task Manager Properties
+    ///今の日付を取得
     @State private var currentDate: Date = .init()
+    ///週間のところの配列
     @State private var weekSlider:[[Date.WeekDay]] = []
     @State private var currentWeekIndex: Int = 1
     @State private var creatWeek: Bool = false
+    ///新しいタスクを作るための
+    @State private var createNewTask: Bool = false
     //MARK: Animation Namespace
     @Namespace private var animation
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
             //MARK: Header View
             HeaderView()
+            
+            ScrollView(.vertical) {
+                VStack{
+                    //MARK: Task View
+                    TasksView(currentDate: $currentDate)
+                    Rectangle()
+                        .frame(height:50)
+                        .foregroundStyle(.gray.opacity(0.025))
+                }
+                .hSpacing(.center)
+                .vSpacing(.center)
+            }
+
+            
         })
         .vSpacing(.top)
+        .overlay(alignment: .topTrailing, content: {
+            Button(action: {
+                createNewTask.toggle()
+            }, label: {
+                Image(systemName: "plus")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .foregroundStyle(Color.coral)
+                    .frame(width: 55, height: 55)
+                ///本当はボタンを丸く浮かせるコードあったけどいらないので省略
+            })
+            .padding(15)
+        })
         .onAppear(perform: {
             if weekSlider.isEmpty {
                 let currentWeek = Date().fetchWeek()
@@ -35,8 +66,16 @@ struct ScheduleHome: View {
                     weekSlider.append(lastDate.creatNextWeek())
                 }
             }
-                
+            
         })
+        .sheet(isPresented: $createNewTask, content: {
+            NewTaskView()
+                .presentationDetents([.height(350)])
+                .interactiveDismissDisabled()
+                .presentationCornerRadius(30)
+                .presentationBackground(.white)
+        })
+        
     }
     //MARK: Header View
     @available(iOS 17.0, *)
@@ -45,7 +84,7 @@ struct ScheduleHome: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 5){
                 Text(currentDate.format("MMMM"))
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(Color.coral)
                 
                 Text(currentDate.format("YYYY"))
                     .foregroundColor(.gray)
@@ -71,12 +110,12 @@ struct ScheduleHome: View {
         }
         .padding(15)
         .hSpacing(.leading)
-        .background(.white)
         .onChange(of: currentWeekIndex, initial: false) { oldValue, newValue in
             if newValue == 0 || newValue == (weekSlider.count - 1) {
                 creatWeek = true
             }
         }
+
     }
     //MARK: Week View
     @ViewBuilder
@@ -96,14 +135,14 @@ struct ScheduleHome: View {
                         .background(content: {
                             if isSameDate(day.date, currentDate) {
                                 Circle()
-                                    .fill(.blue)
+                                    .fill(Color.coral)
                                     .matchedGeometryEffect(id: "TABINDICATOR", in: animation)
                             }
                             
                             //MARK: Indicator to Show, Which is Today;s Date
                             if day.date.isToday {
                                 Circle()
-                                    .fill(.cyan)
+                                    .fill(Color.coral)
                                     .frame(width: 5, height: 5)
                                     .vSpacing(.bottom)
                                     .offset(y: 11)
@@ -136,6 +175,8 @@ struct ScheduleHome: View {
             }
         }
     }
+    
+   
     func paginateWeek() {
         if let firstDate = weekSlider[currentWeekIndex].first?.date, currentWeekIndex == 0 {
             weekSlider.insert(firstDate.creatPreviousWeek(), at: 0)

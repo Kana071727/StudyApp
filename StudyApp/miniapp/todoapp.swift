@@ -24,7 +24,7 @@ struct todoapp: View {
                    height: UIScreen.main.bounds.size.width * 0.15
                )
                .background(RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.purple.gradient)
+                .foregroundStyle(Color(#colorLiteral(red: 0.4962990284, green: 0.609885931, blue: 0.8117103577, alpha: 1)).gradient)
                    )
     }
 }

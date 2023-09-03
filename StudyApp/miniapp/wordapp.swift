@@ -25,8 +25,9 @@ struct wordapp: View {
     }
 }
 
+@available(iOS 17.0, *)
 struct wordapp_Previews: PreviewProvider{
     static var previews: some View {
-        wordapp()
+        ContentView()
     }
 }

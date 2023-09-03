@@ -15,5 +15,7 @@ struct StudyAppApp: App {
             ContentView()
                 .environmentObject(TabEnvironment())
         }
+        .modelContainer(for: Task.self)
+       // .modelContainer(for: Questions.self)
     }
 }

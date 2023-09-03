@@ -18,7 +18,7 @@ struct ContentView: View {
                 } else if tabenvironment.tabnumber == 1 {
                     Scheduleview()
                 } else if tabenvironment.tabnumber == 2 {
-                    workbookList()
+                    WorkbookHome()
                 } else if tabenvironment.tabnumber == 3 {
                     
                 } else if tabenvironment.tabnumber == 4 {
@@ -39,6 +39,7 @@ struct ContentView: View {
             .navigationTitle(tabenvironment.tabname)
             
         }
+        
     }
 }
 
@@ -87,13 +88,13 @@ enum Tab: Int, Identifiable, CaseIterable, Comparable {
     var color: Color {
         switch self {
         case .home:
-            return .indigo
+            return Color.dpurple
         case .calendar:
-            return .pink
+            return Color.coral
         case .book:
-            return .orange
+            return Color.customorange
         case .chart:
-            return .teal
+            return Color.lblue
         }
     }
     var view: Int{
@@ -109,4 +110,5 @@ enum Tab: Int, Identifiable, CaseIterable, Comparable {
         }
     }
 }
+
 

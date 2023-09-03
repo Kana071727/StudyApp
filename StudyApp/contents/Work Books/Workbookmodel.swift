@@ -6,13 +6,29 @@
 //
 
 import SwiftUI
+import SwiftData
 
-struct Workbookmodel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+@available(iOS 17.0, *)
+@Model
+class Questions: Identifiable {
+    var id: UUID
+    var QuestionTitle: String
+    var question: String
+    var detail: String
+    var tag: String
+    var answer: String
+    var result: Int
+    
+    init(id: UUID = .init(), QuestionTitle: String, question: String, detail: String, tag: String, answer: String, result: Int = 0) {
+        self.id = id
+        self.QuestionTitle = QuestionTitle
+        self.question = question
+        self.detail = detail
+        self.tag = tag
+        self.answer = answer
+        self.result = result
     }
+    
 }
 
-#Preview {
-    Workbookmodel()
-}
