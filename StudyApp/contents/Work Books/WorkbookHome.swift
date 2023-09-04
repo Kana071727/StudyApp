@@ -11,6 +11,7 @@ import SwiftUI
 @available(iOS 17.0, *)
 struct WorkbookHome: View {
     @State var addquestion: Bool = false
+    @State private var tags: [String] = ["国語","数学","英語","化学","物理","地理"]
     var body: some View {
         VStack{
             ScrollView(.vertical){
@@ -30,8 +31,7 @@ struct WorkbookHome: View {
                             width: UIScreen.main.bounds.size.width * 0.45,
                             height: UIScreen.main.bounds.size.width * 0.15
                         )
-                        .background(RoundedRectangle(cornerRadius: 15))
-                        .foregroundStyle(Color.yellow.gradient)
+                        .background(Color.customyellow, in: .rect(cornerRadius: 10))
                         Button{
                             
                         }label:{
@@ -50,11 +50,15 @@ struct WorkbookHome: View {
                         Text("カテゴリー")
                             .padding(.leading, 2)
                         ScrollView(.horizontal){
-                            workbookItem()
+                            ForEach(tags, id: \.self) { tag in
+                                WorkbookItem("Cover 1", Color.customyellow, tag)
+                            }
                         }
                     }
                     ScrollView(.horizontal){
-                        workbookItem()
+                        ForEach(tags, id: \.self) { tag in
+                            WorkbookItem("Cover 2", Color.customyellow, tag)
+                        }
                     }
                     Spacer()
                 }
@@ -77,4 +81,22 @@ struct WorkbookHome_previews: PreviewProvider{
 enum ViewStyle: String, CaseIterable{
     case questionList
     case workbooks
+}
+
+@ViewBuilder
+func WorkbookItem(_ cover: String, _ color: Color, _ title: String) -> some View {
+    VStack(alignment:.leading){
+        ZStack(alignment:.bottom){
+            RoundedRectangle(cornerRadius: 15)
+                .frame(width:UIScreen.main.bounds.size.width * 0.45, height: UIScreen.main.bounds.size.width * 0.3)
+                .foregroundStyle(color.opacity(0.6))
+            Image("\(cover)")
+                .frame(width:UIScreen.main.bounds.size.width * 0.3, height: UIScreen.main.bounds.size.width * 0.4)
+                .padding()
+        }
+        VStack(alignment:.leading){
+            Text(title)
+            Text("問題数")
+        }
+    }
 }

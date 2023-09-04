@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var tabenvironment: TabEnvironment
     var body: some View {
-        NavigationView{
+        
             ZStack{
                 if tabenvironment.tabnumber == 0{
                     Scroll()
@@ -23,6 +23,7 @@ struct ContentView: View {
                     
                 } else if tabenvironment.tabnumber == 4 {
                     TimerView()
+                        .environmentObject(TimerModel())
                 } else if tabenvironment.tabnumber == 5{
                     CountDownSetting()
                 } else if tabenvironment.tabnumber == 6{
@@ -35,8 +36,7 @@ struct ContentView: View {
                         TabButton1()
                     }
                 }
-            }
-            .navigationTitle(tabenvironment.tabname)
+            
             
         }
         
@@ -94,7 +94,7 @@ enum Tab: Int, Identifiable, CaseIterable, Comparable {
         case .book:
             return Color.customorange
         case .chart:
-            return Color.lblue
+            return Color.teal
         }
     }
     var view: Int{

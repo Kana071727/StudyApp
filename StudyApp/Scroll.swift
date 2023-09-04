@@ -9,29 +9,35 @@ import SwiftUI
 
 struct Scroll: View {
     var body: some View {
-        ScrollView(){
-            ScrollView(.horizontal){
-                HStack{
-                    timerapp()
-                    chartapp()
-                    wordapp()
-                    todoapp()
-                    dayapp()
-                    timerapp()
-                    chartapp()
-                    wordapp()
-                    todoapp()
-                    dayapp()
-                }
+        VStack(alignment:.leading){
+            Text("My Study")
+                .font(.title)
+                .fontWeight(.semibold)
                 .padding()
+            ScrollView(){
+                ScrollView(.horizontal){
+                    HStack{
+                        timerapp()
+                        chartapp()
+                        wordapp()
+                        recordapp()
+                        dayapp()
+                        timerapp()
+                        chartapp()
+                        wordapp()
+                        recordapp()
+                        dayapp()
+                    }
+                    .padding()
+                }
+                clockWidget()
+                CountdownS()
+                clockWidget()
+                CountdownS()
+                clockWidget()
+                CountdownS()
+                
             }
-            clockWidget()
-            CountdownS()
-            clockWidget()
-            CountdownS()
-            clockWidget()
-            CountdownS()
-            
         }
     }
 }

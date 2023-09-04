@@ -21,7 +21,7 @@ struct chartapp: View {
                    height: UIScreen.main.bounds.size.width * 0.15
                )
                .background(RoundedRectangle(cornerRadius: 15))
-               .foregroundStyle(Color.red.gradient)
+               .foregroundStyle(Color.coral)
         }
     }
 

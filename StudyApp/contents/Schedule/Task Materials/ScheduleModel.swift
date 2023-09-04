@@ -27,15 +27,15 @@ class Task: Identifiable {
     var tintColor: Color {
         switch tint {
         case "TaskColor1":
-            return Color("TaskColor1")
+            return Color.lpink
         case "TaskColor2":
-            return Color("TaskColor2")
+            return Color.coral
         case "TaskColor3":
-            return Color("TaskColor3")
+            return Color.customyellow
         case "TaskColor4":
-            return Color("TaskColor4")
+            return Color.customteal
         case "TaskColor5":
-            return Color("TaskColor5")
+            return Color.lblue
         default: return .black
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TimerView: View {
+    @EnvironmentObject var tabModel: TabEnvironment
     @EnvironmentObject var timerModel: TimerModel
     var body: some View {
         VStack{
@@ -15,37 +16,38 @@ struct TimerView: View {
                 .font(.title2.bold())
                 .foregroundColor(.black)
             
+            
             GeometryReader{proxy in
                 VStack(spacing: 15) {
                     //MARK: Timer Ring
                     ZStack{
                         Circle()
-                            .fill(Color.lblue.opacity(0.03))
+                            .fill(AngularGradient(colors: [Color.customblue,Color.lpink,Color.purple,Color.customblue], center: .center).opacity(0.03))
                             .padding(-40)
                         Circle()
                             .trim(from: 0, to: timerModel.progress)
-                            .stroke(Color.lblue.opacity(0.03), lineWidth: 80)
+                            .stroke(AngularGradient(colors: [Color.customblue,Color.lpink,Color.purple,Color.customblue], center: .center).opacity(0.03), lineWidth: 80)
                         //MARK: Shadow
                         Circle()
-                            .stroke(Color.customblue,lineWidth: 5)
+                            .stroke(AngularGradient(colors: [Color.customblue,Color.lpink,Color.purple,Color.customblue], center: .center),lineWidth: 5)
                             .blur(radius:15)
                             .padding(-2)
                         Circle()
                             .fill(.white)
                         Circle()
                             .trim(from: 0, to: timerModel.progress)
-                            .stroke(Color.customblue.opacity(0.7),lineWidth: 10)
+                            .stroke(AngularGradient(colors: [Color.customblue,Color.lpink,Color.purple,Color.customblue], center: .center),lineWidth: 10)
                         
                         //MARK: PointMark
                         GeometryReader{proxy in
                             let size = proxy.size
                             
                             Circle()
-                                .fill(Color.customblue)
+                                .fill(AngularGradient(colors: [Color.customblue,Color.lpink,Color.purple,Color.customblue], center: .center))
                                 .frame(width: 30, height: 30)
                                 .overlay(content: {
                                     Circle()
-                                        .fill(.white)
+                                        .fill(.white.shadow(.inner(radius: 2)))
                                         .padding(5)
                                 })
                                 .frame(width: size.width, height: size.height, alignment: .center)
@@ -88,6 +90,15 @@ struct TimerView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 
             }
+            Spacer()
+            Button {
+                tabModel.tabnumber = 0
+                tabModel.tabPresent = true
+            } label:{
+                Text("< Back to Home")
+                    .font(.title2)
+            }
+            
         }
         .padding()
         .overlay(content: {
@@ -118,6 +129,8 @@ struct TimerView: View {
                 timerModel.addNewTimer = true
             }
             Button("Close",role: .destructive){
+                tabModel.tabnumber = 0
+                tabModel.tabPresent = true
                 timerModel.stopTimer()
             }
         }

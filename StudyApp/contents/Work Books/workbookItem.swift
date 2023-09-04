@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct workbookItem: View {
+    @State var Cover: [String] = []
     var body: some View {
         VStack(alignment:.leading){
             ZStack(alignment:.bottom){
@@ -20,7 +21,7 @@ struct workbookItem: View {
                     .padding()
             }
             VStack(alignment:.leading){
-                Text("Title")
+                Text("#")
                 Text("問題数")
             }
         }

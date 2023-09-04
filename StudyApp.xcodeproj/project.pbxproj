@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		540A1B9F2A5E8DA20057E0B2 /* todoapp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A1B9E2A5E8DA20057E0B2 /* todoapp.swift */; };
+		540A1B9F2A5E8DA20057E0B2 /* recordapp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A1B9E2A5E8DA20057E0B2 /* recordapp.swift */; };
 		540A1BA12A5E90470057E0B2 /* dayapp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A1BA02A5E90470057E0B2 /* dayapp.swift */; };
 		540A1BA52A5EB39A0057E0B2 /* chartwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A1BA42A5EB39A0057E0B2 /* chartwidget.swift */; };
 		540A1BA72A5EB9920057E0B2 /* TabEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A1BA62A5EB9920057E0B2 /* TabEnvironment.swift */; };
@@ -22,6 +22,9 @@
 		544AEE0A2A5582BE00E4207D /* workbookresult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AEE092A5582BE00E4207D /* workbookresult.swift */; };
 		544AEE0C2A55855100E4207D /* WorkbookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544AEE0B2A55855100E4207D /* WorkbookHome.swift */; };
 		547918EA2A95A944009B9963 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547918E92A95A944009B9963 /* TimerModel.swift */; };
+		5485E33C2AA5A35E00C69229 /* ChartHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E33B2AA5A35E00C69229 /* ChartHome.swift */; };
+		5485E33E2AA5EC1E00C69229 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E33D2AA5EC1D00C69229 /* TagView.swift */; };
+		5485E3412AA5F99900C69229 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E3402AA5F99900C69229 /* TagLayout.swift */; };
 		54A783A02A95D62C00E9AB1A /* Scheduleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */; };
 		54A9B1042A430B20008227C7 /* ClockSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B1032A430B20008227C7 /* ClockSmall.swift */; };
 		54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B10B2A43132B008227C7 /* CountdownS.swift */; };
@@ -72,7 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		540A1B9E2A5E8DA20057E0B2 /* todoapp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoapp.swift; sourceTree = "<group>"; };
+		540A1B9E2A5E8DA20057E0B2 /* recordapp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recordapp.swift; sourceTree = "<group>"; };
 		540A1BA02A5E90470057E0B2 /* dayapp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dayapp.swift; sourceTree = "<group>"; };
 		540A1BA42A5EB39A0057E0B2 /* chartwidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartwidget.swift; sourceTree = "<group>"; };
 		540A1BA62A5EB9920057E0B2 /* TabEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabEnvironment.swift; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		544AEE092A5582BE00E4207D /* workbookresult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workbookresult.swift; sourceTree = "<group>"; };
 		544AEE0B2A55855100E4207D /* WorkbookHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookHome.swift; sourceTree = "<group>"; };
 		547918E92A95A944009B9963 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		5485E33B2AA5A35E00C69229 /* ChartHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHome.swift; sourceTree = "<group>"; };
+		5485E33D2AA5EC1D00C69229 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		5485E3402AA5F99900C69229 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
 		54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduleview.swift; sourceTree = "<group>"; };
 		54A9B1032A430B20008227C7 /* ClockSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSmall.swift; sourceTree = "<group>"; };
 		54A9B10B2A43132B008227C7 /* CountdownS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownS.swift; sourceTree = "<group>"; };
@@ -161,7 +167,7 @@
 			children = (
 				544AEE012A55474C00E4207D /* timerapp.swift */,
 				540A1BA02A5E90470057E0B2 /* dayapp.swift */,
-				540A1B9E2A5E8DA20057E0B2 /* todoapp.swift */,
+				540A1B9E2A5E8DA20057E0B2 /* recordapp.swift */,
 				544AEE032A5557C200E4207D /* chartapp.swift */,
 				544AEE052A55599400E4207D /* wordapp.swift */,
 			);
@@ -175,6 +181,7 @@
 				54C1D7212A9F33E2000AB6AE /* questionList.swift */,
 				54C1D7252AA20BD1000AB6AE /* questionItem.swift */,
 				54EE0A7C2A93692600A9DA5E /* workbookaddview.swift */,
+				5485E33F2AA5F97600C69229 /* Tags */,
 				54C1D71F2A9F2249000AB6AE /* Workbookmodel.swift */,
 				54EE0A7A2A7A747200A9DA5E /* workbookItem.swift */,
 				544AEE072A556FC200E4207D /* questionView.swift */,
@@ -194,6 +201,15 @@
 				54288C382A972F4C00CFB23A /* OffsetKey.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		5485E33F2AA5F97600C69229 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				5485E33D2AA5EC1D00C69229 /* TagView.swift */,
+				5485E3402AA5F99900C69229 /* TagLayout.swift */,
+			);
+			path = Tags;
 			sourceTree = "<group>";
 		};
 		54A9B1002A4309C1008227C7 /* Clock(Timer) */ = {
@@ -227,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				540A1BA42A5EB39A0057E0B2 /* chartwidget.swift */,
+				5485E33B2AA5A35E00C69229 /* ChartHome.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -490,11 +507,13 @@
 				547918EA2A95A944009B9963 /* TimerModel.swift in Sources */,
 				540A1BAB2A5EC2180057E0B2 /* WordWindow.swift in Sources */,
 				54EE0A7B2A7A747200A9DA5E /* workbookItem.swift in Sources */,
+				5485E33E2AA5EC1E00C69229 /* TagView.swift in Sources */,
 				54D97A9F2A96124700608E9F /* ScheduleModel.swift in Sources */,
 				54288C392A972F4C00CFB23A /* OffsetKey.swift in Sources */,
 				54F6248D2A1E22E5006C5474 /* ContentView.swift in Sources */,
 				544AEE082A556FC200E4207D /* questionView.swift in Sources */,
 				544AEE022A55474C00E4207D /* timerapp.swift in Sources */,
+				5485E3412AA5F99900C69229 /* TagLayout.swift in Sources */,
 				54EE0A792A7A553A00A9DA5E /* CountDownSetting.swift in Sources */,
 				54C1D7142A9743C1000AB6AE /* TaskRowView.swift in Sources */,
 				54B969E42A70085A00258871 /* TodoItem.swift in Sources */,
@@ -507,6 +526,7 @@
 				54A9B1042A430B20008227C7 /* ClockSmall.swift in Sources */,
 				54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */,
 				544AEE0C2A55855100E4207D /* WorkbookHome.swift in Sources */,
+				5485E33C2AA5A35E00C69229 /* ChartHome.swift in Sources */,
 				540A1BA72A5EB9920057E0B2 /* TabEnvironment.swift in Sources */,
 				54D97AA32A96167200608E9F /* ScheduleHome.swift in Sources */,
 				54C1D7222A9F33E2000AB6AE /* questionList.swift in Sources */,
@@ -518,7 +538,7 @@
 				54D97AA52A9617B100608E9F /* Date+Extension(Schedule).swift in Sources */,
 				54C1D71E2A9B853B000AB6AE /* SwiftUIView.swift in Sources */,
 				54EE0A752A7A35B800A9DA5E /* AddTodo.swift in Sources */,
-				540A1B9F2A5E8DA20057E0B2 /* todoapp.swift in Sources */,
+				540A1B9F2A5E8DA20057E0B2 /* recordapp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

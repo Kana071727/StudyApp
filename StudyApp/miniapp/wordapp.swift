@@ -21,7 +21,7 @@ struct wordapp: View {
                    height: UIScreen.main.bounds.size.width * 0.15
                )
                .background(RoundedRectangle(cornerRadius: 15)
-                .foregroundStyle(Color.green.gradient))
+                .foregroundStyle(Color.customgreen))
     }
 }
 
