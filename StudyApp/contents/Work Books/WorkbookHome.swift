@@ -51,13 +51,15 @@ struct WorkbookHome: View {
                             .padding(.leading, 2)
                         ScrollView(.horizontal){
                             ForEach(tags, id: \.self) { tag in
-                                WorkbookItem("Cover 1", Color.customyellow, tag)
+                                WorkbookItem(Color.customyellow, tag)
+                                    
                             }
                         }
                     }
                     ScrollView(.horizontal){
                         ForEach(tags, id: \.self) { tag in
-                            WorkbookItem("Cover 2", Color.customyellow, tag)
+                            WorkbookItem(Color.customyellow, tag)
+                                .frame(width: 50, height: 80)
                         }
                     }
                     Spacer()
@@ -84,14 +86,15 @@ enum ViewStyle: String, CaseIterable{
 }
 
 @ViewBuilder
-func WorkbookItem(_ cover: String, _ color: Color, _ title: String) -> some View {
+func WorkbookItem( _ color: Color, _ title: String) -> some View {
     VStack(alignment:.leading){
         ZStack(alignment:.bottom){
             RoundedRectangle(cornerRadius: 15)
                 .frame(width:UIScreen.main.bounds.size.width * 0.45, height: UIScreen.main.bounds.size.width * 0.3)
-                .foregroundStyle(color.opacity(0.6))
-            Image("\(cover)")
+                .foregroundStyle(.gray.opacity(0.6))
+            RoundedRectangle(cornerRadius: 15)
                 .frame(width:UIScreen.main.bounds.size.width * 0.3, height: UIScreen.main.bounds.size.width * 0.4)
+                .foregroundColor(color)
                 .padding()
         }
         VStack(alignment:.leading){

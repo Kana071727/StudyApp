@@ -6,13 +6,28 @@
 //
 
 import SwiftUI
+import Charts
 
+@available(iOS 17.0, *)
 struct ChartHome: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Chart {
+            ForEach(appDownloads) { download in
+                SectorMark(
+                    angle: .value("Downloads", download.downloads),
+                    innerRadius: 2,
+                    angularInset: 4
+                )
+                .cornerRadius(8)
+                .foregroundStyle(by: .value("Month", download.month))
+            }
+        }
     }
 }
 
-#Preview {
-    ChartHome()
+@available(iOS 17.0, *)
+struct ChartHome_Previews: PreviewProvider {
+    static var previews: some View {
+        ChartHome()
+    }
 }

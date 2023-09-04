@@ -25,6 +25,7 @@
 		5485E33C2AA5A35E00C69229 /* ChartHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E33B2AA5A35E00C69229 /* ChartHome.swift */; };
 		5485E33E2AA5EC1E00C69229 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E33D2AA5EC1D00C69229 /* TagView.swift */; };
 		5485E3412AA5F99900C69229 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5485E3402AA5F99900C69229 /* TagLayout.swift */; };
+		548ECC032AA61664005BD415 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548ECC022AA61664005BD415 /* ChartModel.swift */; };
 		54A783A02A95D62C00E9AB1A /* Scheduleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */; };
 		54A9B1042A430B20008227C7 /* ClockSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B1032A430B20008227C7 /* ClockSmall.swift */; };
 		54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A9B10B2A43132B008227C7 /* CountdownS.swift */; };
@@ -93,6 +94,7 @@
 		5485E33B2AA5A35E00C69229 /* ChartHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHome.swift; sourceTree = "<group>"; };
 		5485E33D2AA5EC1D00C69229 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		5485E3402AA5F99900C69229 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		548ECC022AA61664005BD415 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
 		54A7839F2A95D62C00E9AB1A /* Scheduleview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduleview.swift; sourceTree = "<group>"; };
 		54A9B1032A430B20008227C7 /* ClockSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSmall.swift; sourceTree = "<group>"; };
 		54A9B10B2A43132B008227C7 /* CountdownS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownS.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				540A1BA42A5EB39A0057E0B2 /* chartwidget.swift */,
 				5485E33B2AA5A35E00C69229 /* ChartHome.swift */,
+				548ECC022AA61664005BD415 /* ChartModel.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				54A9B1042A430B20008227C7 /* ClockSmall.swift in Sources */,
 				54A9B10C2A43132B008227C7 /* CountdownS.swift in Sources */,
 				544AEE0C2A55855100E4207D /* WorkbookHome.swift in Sources */,
+				548ECC032AA61664005BD415 /* ChartModel.swift in Sources */,
 				5485E33C2AA5A35E00C69229 /* ChartHome.swift in Sources */,
 				540A1BA72A5EB9920057E0B2 /* TabEnvironment.swift in Sources */,
 				54D97AA32A96167200608E9F /* ScheduleHome.swift in Sources */,

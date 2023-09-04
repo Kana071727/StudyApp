@@ -15,8 +15,7 @@ struct Scroll: View {
                 .fontWeight(.semibold)
                 .padding()
             ScrollView(){
-                ScrollView(.horizontal){
-                    HStack{
+                HStack(alignment:.center){
                         timerapp()
                         chartapp()
                         wordapp()
@@ -29,7 +28,6 @@ struct Scroll: View {
                         dayapp()
                     }
                     .padding()
-                }
                 clockWidget()
                 CountdownS()
                 clockWidget()
